@@ -43,6 +43,11 @@ sudo apt install -y kubeadm=1.28.1-1.1 kubelet=1.28.1-1.1 kubectl=1.28.1-1.1
 
 ```bash
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+
+###run on any workernode to join cluster
+kubeadm join 172.31.14.18:6443 --token 0i8vwg.qjrmnny0g1rryd8p \
+        --discovery-token-ca-cert-hash sha256:d438d7a2dd85e0b05e9653885929e854368b8c14314737c9a427dbaf459337ef
 ```
 
 ### 8. Configure Kubernetes Cluster [On MasterNode]
